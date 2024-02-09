@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if li == "ol" %}
+    <h2 style="text-align: center;">Список профессий</h2>
+    <ol>
+        {% for el in professions %}
+        <li>{{ el }}</li>
+        {% endfor %}
+    </ol>
+    {% elif li == "ul" %}
+    <h2 style="text-align: center;">Список профессий</h2>
+    <ul>
+        {% for el in professions %}
+        <li>{{ el }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Ошибка</p>
+    {% endif %}
+{% endblock %}
