@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if "инженер" in prof or "строитель" in prof %}
+    <h2 style="text-align: center;">Инженерные тренажёры</h2>
+    <div style="text-align: center;">
+    <img src="/static/img/ing.png">
+    </div>
+    {% elif prof == "" %}
+    <div></div>
+    {% else %}
+    <h2 style="text-align: center;">Научные симуляторы</h2>
+    <div style="text-align: center;">
+    <img src="/static/img/sci.png">
+    </div>
+    {% endif %}
+{% endblock %}
